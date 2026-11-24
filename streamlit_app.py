@@ -29,8 +29,9 @@ with header_title_col:
     st.markdown(
         """
         <div class="ct-header-title-wrap">
-            <h1 class="ct-header-title">PGRFA Conservation and Use Metrics</h1>
+            <h1 class="ct-header-title">PGRFA Conservation and Use Metrics Dashboard</h1>
             <p class="ct-header-subtitle">Overview of the global status of ex situ conservation and use of genetic resources of 30 crops</p>
+            <p class="ct-header-subtitle">Data retrieved from multiple sources in 2025</p>
             <p class="ct-header-sublink">Full reports on the 30 crops available on <a href="https://www.croptrust.org/knowledge-hub/crop-conservation-strategies/" target="_blank" rel="noopener noreferrer">Crop Trust Website</a></p>
         </div>
         """,
@@ -249,13 +250,13 @@ METRIC_DOMAINS = {
 # -----------------------------------------------------------------------------
 # Data Loaders (30-Sheet Merged Files)
 # -----------------------------------------------------------------------------
-FILE_TABLE1 = "Data/merged_30_sheets_Table1_all_crops.xlsx"
-FILE_TABLE2 = "Data/merged_30_sheets_SI_Table1_all_crops.xlsx"
-FILE_SI_TABLE2 = "Data/merged_30_sheets_SI_Table2_all_crops.xlsx"
-FILE_TABLE3 = "Data/merged_30_sheets_Table3_all_crops.xlsx"
-FILE_TABLE4 = "Data/merged_30_sheets_Table4_all_crops.xlsx"
-FILE_TABLE5 = "Data/merged_30_sheets_Table5_all_crops.xlsx"
-FILE_TABLE6 = "Data/merged_30_sheets_Table6_all_crops.xlsx"
+FILE_TABLE1 = "merged_30_sheets_Table1_all_crops.xlsx"
+FILE_TABLE2 = "merged_30_sheets_SI_Table1_all_crops.xlsx"
+FILE_SI_TABLE2 = "merged_30_sheets_SI_Table2_all_crops.xlsx"
+FILE_TABLE3 = "merged_30_sheets_Table3_all_crops.xlsx"
+FILE_TABLE4 = "merged_30_sheets_Table4_all_crops.xlsx"
+FILE_TABLE5 = "merged_30_sheets_Table5_all_crops.xlsx"
+FILE_TABLE6 = "merged_30_sheets_Table6_all_crops.xlsx"
 
 def clean_numeric(series):
     """Safely convert strings with commas, %, or em-dashes to float."""
@@ -2120,6 +2121,27 @@ elif selected_section == "📖 Methods and data sources":
 
         **Data Processing & Code**
         * Data processing, metric calculation, and table generation were conducted in R, with code available on this [GitLab repository](https://gitlab.com/GlobalCropDiversityTrust/pgrfa-metrics).
-        * Extended methods are available [here](https://www.croptrust.org/resources/).
+        * Extended methods are available [here](https://www.croptrust.org/fileadmin/uploads/croptrust/Documents/GCCS_Summaries/GCCS_metrics_methods.pdf/).
         """
     )
+# -----------------------------------------------------------------------------
+# Footer Disclaimer (at the very bottom of the script)
+# -----------------------------------------------------------------------------
+
+st.divider()
+st.markdown(
+    """
+    <div class="ct-footer-box">
+        <p><span class="ct-footer-heading">Crop Trust</span><br>
+        Platz der Vereinten Nationen 7, 53113 Bonn, Germany<br>
+        General Contact: +49 (0) 228 85427 118 | <a href="mailto:info@croptrust.org">info@croptrust.org</a></p>
+        <p><span class="ct-footer-heading">Copyright:</span> © 2025 Global Crop Diversity Trust.</p>
+        <p><span class="ct-footer-heading">Disclaimer:</span> Data presented in this dashboard reflect information retrieved and analyzed in 2025. For current figures, please refer directly to the primary sources listed in <em>Methods and data sources</em>.</p>
+        <p><span class="ct-footer-heading">Permission to Use:</span> This publication may be reproduced in whole or in part, and in any form, for educational or non-profit purposes without special permission from the copyright holder, provided that the source is acknowledged. No use of this publication may be made for resale or for any other commercial purpose without prior written permission from the Global Crop Diversity Trust.
+        Except as otherwise expressly indicated, all text, charts, and tabular content contained in this document are licensed under the Creative Commons Attribution–NonCommercial–ShareAlike (CC BY-NC-SA) license.</p>
+        <p><span class="ct-footer-heading">Suggested Citation:</span> Giovannini, P (2026) <em>PGRFA Conservation and Use Metrics Dashboard</em>. Bonn, Germany: Global Crop Diversity Trust. URL: to be added here</p>
+        <p><span class="ct-footer-heading">Acknowledgements:</span> The metrics shown in this dashboard were developed as part of the project <em>Mainstreaming Global Crop Conservation Strategies in Plant Treaty Processes</em>, led by the Crop Trust and funded by the German Federal Ministry of Agriculture, Food and Regional Identity (BMLEH).</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
