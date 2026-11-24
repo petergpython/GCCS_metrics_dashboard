@@ -742,15 +742,18 @@ elif selected_section == "🌾 Genebank Holdings":
         
         total_crop_acc = crop_t2_df['Number of accessions'].sum()
         
-        kpi1, kpi2, kpi3, kpi4 = st.columns(4)
+        kpi1, kpi2, kpi3, kpi4, kpi5 = st.columns(5)
         with kpi1:
             st.metric("Total Accessions", f"{total_crop_acc:,.0f}")
         with kpi2:
             st.metric("Holding Institutions", len(crop_t2_df))
         with kpi3:
             lt_sum = crop_t2_df['Number of accessions in long term storage (-18-20 C)'].sum()
-            st.metric("Long-Term Storage (-18°C)", f"{lt_sum:,.0f}")
+            st.metric("Seed storage at -18°C", f"{lt_sum:,.0f}")
         with kpi4:
+            vitro_sum = crop_t2_df['Number of accessions conserved in vitro or in cryo storage'].sum()
+            st.metric("In-vitro / Cryo storage", f"{vitro_sum:,.0f}")
+        with kpi5:
             mls_sum = crop_t2_df['Number of accessions included in MLS (from GLIS)'].sum()
             st.metric("Included in MLS (GLIS)", f"{mls_sum:,.0f}")
 
