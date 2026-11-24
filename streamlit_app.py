@@ -749,7 +749,7 @@ elif selected_section == "🌾 Genebank Holdings":
             st.metric("Holding Institutions", len(crop_t2_df))
         with kpi3:
             lt_sum = crop_t2_df['Number of accessions in long term storage (-18-20 C)'].sum()
-            st.metric("Long-Term Storage (-18°C)", f"{lt_sum:,.0f}")
+            st.metric("Seed Storage at -18°C", f"{lt_sum:,.0f}")
         with kpi4:
             mls_sum = crop_t2_df['Number of accessions included in MLS (from GLIS)'].sum()
             st.metric("Included in MLS (GLIS)", f"{mls_sum:,.0f}")
@@ -802,7 +802,7 @@ elif selected_section == "🌾 Genebank Holdings":
             other_val = max(0, total_crop_acc - (lt_val + vitro_val))
             
             storage_pie_df = pd.DataFrame({
-                "Storage Type": ["Long-Term Seed (-18°C)", "In-Vitro / Cryo", "Other / Unspecified"],
+                "Storage Type": ["Seed storage at -18°C", "In-Vitro / Cryo", "Other / Unspecified"],
                 "Accessions": [lt_val, vitro_val, other_val]
             })
             fig_storage_pie = px.pie(
@@ -871,14 +871,14 @@ elif selected_section == "🌾 Genebank Holdings":
             t2_type_melted = t2_type_summary.melt(
                 id_vars=["Crop Type"],
                 value_vars=[
-                    "Number of accessions in long term storage (-18-20 C)",
+                    "Number of accessions conserved as seed in long term storage (-18-20 C)",
                     "Number of accessions included in MLS (from GLIS)"
                 ],
                 var_name="Category",
                 value_name="Accession Count"
             )
             t2_type_melted["Category"] = t2_type_melted["Category"].replace({
-                "Number of accessions in long term storage (-18-20 C)": "Long-Term Storage (-18°C)",
+                "Number of accessions in long term storage (-18-20 C)": "Seed conserved in long-term Storage (-18°C)",
                 "Number of accessions included in MLS (from GLIS)": "MLS Included (GLIS)"
             })
             fig_type_comp = px.bar(
