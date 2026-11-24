@@ -10,7 +10,7 @@ import base64
 # -----------------------------------------------------------------------------
 # Page Header with Crop Trust Logo on the Left (Crop Trust Website Style)
 # -----------------------------------------------------------------------------
-LOGO_FILE = "ctLOGO.svg"  # <-- 2. UPDATE FILENAME FROM .png TO .svg
+LOGO_FILE = "images/ctLOGO.svg"  # logo is in the images folder 
 
 header_logo_col, header_title_col = st.columns([1.15, 4.85], vertical_alignment="center")
 with header_logo_col:
