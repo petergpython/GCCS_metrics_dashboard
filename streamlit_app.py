@@ -2139,7 +2139,7 @@ st.markdown(
         <p><span class="ct-footer-heading">Disclaimer:</span> Data presented in this dashboard reflect information retrieved and analyzed in 2025. For current figures, please refer directly to the primary sources listed in <em>Methods and data sources</em>.</p>
         <p><span class="ct-footer-heading">Permission to Use:</span> This publication may be reproduced in whole or in part, and in any form, for educational or non-profit purposes without special permission from the copyright holder, provided that the source is acknowledged. No use of this publication may be made for resale or for any other commercial purpose without prior written permission from the Global Crop Diversity Trust.
         Except as otherwise expressly indicated, all text, charts, and tabular content contained in this document are licensed under the Creative Commons Attribution–NonCommercial–ShareAlike (CC BY-NC-SA) license.</p>
-        <p><span class="ct-footer-heading">Suggested Citation:</span> Giovannini, P (2026) <em>PGRFA Conservation and Use Metrics Dashboard</em>. Bonn, Germany: Global Crop Diversity Trust. URL: to be added here</p>
+        <p><span class="ct-footer-heading">Suggested Citation:</span> Giovannini, P (2026) <em>PGRFA Conservation and Use Metrics Dashboard</em>. Bonn, Germany: Global Crop Diversity Trust. URL: https://pgrfa-metrics-dashboard.streamlit.app/</p>
         <p><span class="ct-footer-heading">Acknowledgements:</span> The metrics shown in this dashboard were developed as part of the project <em>Mainstreaming Global Crop Conservation Strategies in Plant Treaty Processes</em>, led by the Crop Trust and funded by the German Federal Ministry of Agriculture, Food and Regional Identity (BMLEH).</p>
     </div>
     """,
