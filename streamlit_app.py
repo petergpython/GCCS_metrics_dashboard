@@ -250,13 +250,13 @@ METRIC_DOMAINS = {
 # -----------------------------------------------------------------------------
 # Data Loaders (30-Sheet Merged Files)
 # -----------------------------------------------------------------------------
-FILE_TABLE1 = "merged_30_sheets_Table1_all_crops.xlsx"
-FILE_TABLE2 = "merged_30_sheets_SI_Table1_all_crops.xlsx"
-FILE_SI_TABLE2 = "merged_30_sheets_SI_Table2_all_crops.xlsx"
-FILE_TABLE3 = "merged_30_sheets_Table3_all_crops.xlsx"
-FILE_TABLE4 = "merged_30_sheets_Table4_all_crops.xlsx"
-FILE_TABLE5 = "merged_30_sheets_Table5_all_crops.xlsx"
-FILE_TABLE6 = "merged_30_sheets_Table6_all_crops.xlsx"
+FILE_TABLE1 = "Data/merged_30_sheets_Table1_all_crops.xlsx"
+FILE_TABLE2 = "Data/merged_30_sheets_SI_Table1_all_crops.xlsx"
+FILE_SI_TABLE2 = "Data/merged_30_sheets_SI_Table2_all_crops.xlsx"
+FILE_TABLE3 = "Data/merged_30_sheets_Table3_all_crops.xlsx"
+FILE_TABLE4 = "Data/merged_30_sheets_Table4_all_crops.xlsx"
+FILE_TABLE5 = "Data/merged_30_sheets_Table5_all_crops.xlsx"
+FILE_TABLE6 = "Data/merged_30_sheets_Table6_all_crops.xlsx"
 
 def clean_numeric(series):
     """Safely convert strings with commas, %, or em-dashes to float."""
